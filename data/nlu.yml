@@ -1,0 +1,160 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: ask_question_about_plant_part
+  examples: |
+    - What functions does the [stem](plant_part) perform?
+    - What do the [roots](plant_part) do?
+    - Why are [leaves](plant_part) important?
+    - Can you tell me more about the role of the [stem](plant_part)?
+    - What's the purpose of [roots](plant_part)?
+    - what are [roots](plant_part)?
+    - what is [stem](plant_part)?
+    - what [roots](plant_part)
+    - what [leaves](plant_part) do
+- intent: ask_question_about_part_advantage
+  examples: |
+    - When is a [thick](adjective) [stem](plant_part) good?
+    - What are the advantages of [deep](adjective) [roots](plant_part)?
+    - When are [big](adjective) [leaves](plant_part) beneficial for the plant?
+    - When should a [stem](plant_part) have a [bark](adjective)?
+    - When should I choose [non-branching](adjective) [roots](adjective)?
+    - when [big](adjective) [leaves](plant_part) good
+    - Can you tell me more about [thick](adjective) [stem](plant_part)
+    - Tell me about [thin](adjective) [leaves](plant_part)
+    - I don't understand [thin](adjective) [leaves](plant_part)
+    - Please repeat [thick](adjective) [stem](plant_part)
+    - what are [thin](adjective) [roots](plant_part)
+    - where do [thick](adjective) [leaves](plant_part) thrive
+    - where [deep](adjective) [roots](plant_part) grow
+    - yo when are [shallow](adjective) [roots](plant_part) good
+    - when [short](adjective) [stem](plant_part) is good
+    - are [thin-skinned](adjective) [leaves](plant_part) good
+    - where [thick-skinned](adjective) [leaves](plant_part) gro
+    - temme about [branching](adjective) [roots](plant_part)
+    - i dont get [non-branching](adjective) [roots](plant_part)
+- intent: ask_question_about_environment
+  examples: |
+    - What should I keep in mind when the [wind](environment) is [high](environment_adjective)?
+    - What is vital in  [low](environment_adjective) [sunlight](environment)?
+    - what good in [low](environment_adjective) [rainfall](environment)?
+    - what do when [high](environment_adjective) [nutrients](environment)?
+    - wht to remember when [wind](environment) [high](environment_adjective)
+    - whats important in [high](environment_adjective) [rainfall](environment)
+    - [high](environment_adjective) [temperature](environment) do what
+    - what grows when [water table](environment) is [high](environment_adjective)
+    - what grows when [water table](environment) [low](environment_adjective)
+    - whats good in [high](environment_adjective) [rainfall](environment)
+    - what grows in [low](environment_adjective) [sunlight](environment)
+    - whats good when [nutrients](environment) [low](environment_adjective)
+- intent: ask_question_about_physiological_process
+  examples: |
+    - what [osmosis](physiological_process) do
+    - Describe [photosynthesis](physiological_process)
+    - i dont get [water transport](physiological_process)
+    - explain [nutrient transport](physiological_process)
+    - whats [water transport](physiological_process)
+    - i don get [nutrient transport](physiological_process)
+    - what is [transpiration](physiological_process) in plants
+    - what was [transpiration](physiological_process) again
+    - what does [photosynthesis](physiological_process) do again
+- intent: ask_question_about_location
+  examples: |
+    - where are we
+    - what are we doing here?
+    - what planet are we on
+    - what environment is that
+    - what environment are we in
+    - what's this planet
+    - remind me where we are
+    - repeat what the environment is
+- intent: ask_question_about_identity
+  examples: |
+    - are you a real person
+    - are you a robot
+    - who are you
+    - tell me about yourself
+- intent: ask_about_experiment
+  examples: |
+    - what are we doing here
+    - what is your purpose
+    - tell me about the experiment
+    - what is this experiment
+    - why are we doing this
+    - why are we here
+    - what do you do
+- intent: ask_how_are_you
+  examples: |
+    - how are you
+    - how's it going
+    - what's up
+    - how you doing
+    - how's life
+- lookup: plant_part
+  examples: |
+    - leaves
+    - stem
+    - roots
+- lookup: adjective
+  examples: |
+    - thick
+    - thin
+    - big
+    - small
+    - long
+    - short
+    - deep
+    - shallow
+    - thick-skinned
+    - thin-skinned
+    - branching
+    - non-branching
+    - bark
+    - no bark
+- lookup: environment
+  examples: |
+    - sunlight
+    - wind
+    - water table
+    - nutrients
+    - rainfall
+    - temperature
+- lookup: environment_adjective
+  examples: |
+    - low
+    - high
+- lookup: physiological_process
+  examples: |
+    - photosynthesis
+    - transpiration
+    - water transport
+    - nutrient transport
+    - respiration
+    - osmosis

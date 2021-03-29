@@ -1,0 +1,34 @@
+version: "2.0"
+
+rules:
+
+- rule: Say hello anytime the user says hello
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Answer question about process
+  steps:
+  - intent: ask_question_about_physiological_process
+  - action: action_answer_question_about_physiological_process
+
+
+- rule: Answer question about environment
+  steps:
+  - intent: ask_question_about_environment
+  - action: action_answer_question_about_environment
+
+- rule: Answer question about advantage
+  steps:
+  - intent: ask_question_about_part_advantage
+  - action: action_answer_question_about_part_advantage
+
+- rule: Answer question about plant part
+  steps:
+  - intent: ask_question_about_plant_part
+  - action: action_answer_question_about_plant_part

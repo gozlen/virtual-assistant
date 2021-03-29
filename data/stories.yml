@@ -1,0 +1,128 @@
+version: "2.0"
+
+stories:
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: ask_question
+#   - action: action_answer_question
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_question_about_part_advantage
+    entities:
+    - adjective: deep
+    - plant_part: roots
+  - action: action_answer_question_about_part_advantage
+  - intent: ask_question_about_environment
+    entities:
+    - environment: wind
+    - environment_adjective: high
+  - action: action_answer_question_about_environment
+  - intent: ask_question_about_environment
+    entities:
+    - environment_adjective: high
+    - environment: rainfall
+  - action: action_answer_question_about_environment
+  - intent: ask_question_about_environment
+    entities:
+    - environment_adjective: high
+    - environment: temperature
+  - action: action_answer_question_about_environment
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_question_about_environment
+    entities:
+    - environment: water table
+    - environment_adjective: high
+  - action: action_answer_question_about_environment
+  - intent: ask_question_about_environment
+    entities:
+    - environment: water table
+    - environment_adjective: low
+  - action: action_answer_question_about_environment
+  - intent: ask_question_about_physiological_process
+    entities:
+    - physiological_process: water transport
+  - action: action_answer_question_about_physiological_process
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_question_about_plant_part
+    entities:
+    - plant_part: roots
+  - action: action_answer_question_about_plant_part
+  - intent: ask_question_about_plant_part
+    entities:
+    - plant_part: leaves
+  - action: action_answer_question_about_plant_part
+  - intent: ask_question_about_physiological_process
+    entities:
+    - physiological_process: nutrient transport
+  - action: action_answer_question_about_physiological_process
+  - intent: ask_question_about_environment
+    entities:
+    - environment_adjective: high
+    - environment: rainfall
+  - action: action_answer_question_about_environment
+  - intent: ask_question_about_part_advantage
+    entities:
+    - environment_adjective: shallow
+    - plant_part: roots
+  - action: action_answer_question_about_part_advantage
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_question_about_part_advantage
+    entities:
+    - adjective: short
+    - plant_part: stem
+  - action: action_answer_question_about_part_advantage
+  - intent: ask_question_about_part_advantage
+    entities:
+    - adjective: thin-skinned
+    - plant_part: leaves
+  - action: action_answer_question_about_part_advantage
+  - intent: ask_question_about_part_advantage
+    entities:
+    - adjective: thick-skinned
+    - plant_part: leaves
+  - action: action_answer_question_about_part_advantage
+  - intent: ask_question_about_part_advantage
+    entities:
+    - adjective: branching
+    - plant_part: roots
+  - action: action_answer_question_about_part_advantage
+  - intent: ask_question_about_part_advantage
+    entities:
+    - adjective: non-branching
+    - plant_part: roots
+  - action: action_answer_question_about_part_advantage
+  - intent: ask_question_about_environment
+    entities:
+    - environment_adjective: low
+    - environment: sunlight
+  - action: action_answer_question_about_environment
+  - intent: ask_question_about_environment
+    entities:
+    - environment: nutrients
+    - environment_adjective: low
+  - action: action_answer_question_about_environment
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_question_about_physiological_process
+    entities:
+    - physiological_process: transpiration
+  - action: action_answer_question_about_physiological_process
+  - intent: ask_question_about_physiological_process
+    entities:
+    - physiological_process: transpiration
+  - action: action_answer_question_about_physiological_process
+  - intent: ask_question_about_physiological_process
+    entities:
+    - physiological_process: photosynthesis
+  - action: action_answer_question_about_physiological_process

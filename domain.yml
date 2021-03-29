@@ -1,0 +1,30 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- ask_question_about_physiological_process
+- ask_question_about_environment
+- ask_question_about_part_advantage
+- ask_question_about_plant_part
+- greet
+- goodbye
+entities:
+- adjective
+- environment
+- environment_adjective
+- physiological_process
+- plant_part
+responses:
+  utter_greet:
+  - text: Hey! There I'm your peronal assistant
+  utter_answer_question:
+  - text: Here you go you ding dong this is a {placeholder}
+  utter_goodbye:
+  - text: Bye
+actions:
+- action_answer_question
+- action_answer_question_about_environment
+- action_answer_question_about_part_advantage
+- action_answer_question_about_physiological_process
+- action_answer_question_about_plant_part
