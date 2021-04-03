@@ -17,7 +17,6 @@ rules:
   - intent: ask_question_about_physiological_process
   - action: action_answer_question_about_physiological_process
 
-
 - rule: Answer question about environment
   steps:
   - intent: ask_question_about_environment

@@ -85,6 +85,14 @@ nlu:
     - what is [transpiration](physiological_process) in plants
     - what was [transpiration](physiological_process) again
     - what does [photosynthesis](physiological_process) do again
+- intent: ask_question_about_plant_in_environment
+  examples: |
+    - what [roots](plant_part) are good when the [wind](environment) is [high](environment_adjective)
+    - which [stem] should i choose when the [water table](environment) is [low](environment_adjective)
+    - which [leaves](plant_part) are good in [low](environment_adjective) [nutrition](environment) environments?
+    - what kind of [stem](plant_part) is best under [high](environment_adjective) [rainfall](environment)
+    - what type of [roots](plant_part) grow in [low](environment_adjective) [temperature](environment)
+    - what [leaves](plant_part) [high](environment_adjective) [sunlight](environment)?
 - intent: ask_question_about_location
   examples: |
     - where are we
