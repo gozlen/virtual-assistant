@@ -31,3 +31,8 @@ rules:
   steps:
   - intent: ask_question_about_plant_part
   - action: action_answer_question_about_plant_part
+
+- rule: Answer question about plant environment
+  steps:
+  - intent: ask_question_about_plant_in_environment
+  - action: action_answer_question_about_plant_in_environment

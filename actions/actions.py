@@ -92,7 +92,6 @@ class ActionAnswerQuestionAboutPartAdvantage(Action):
 
         return []        
 
-
 class ActionAnswerQuestionAboutPlantPart(Action):
 
     def name(self) -> Text:
@@ -107,3 +106,20 @@ class ActionAnswerQuestionAboutPlantPart(Action):
         dispatcher.utter_message(template="utter_answer_question",placeholder=plant_part)
 
         return []        
+
+class ActionAnswerQuestionAboutPlantInEnvironment(Action):
+
+    def name(self) -> Text:
+        return "action_answer_question_about_plant_in_environment"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        plant_part = next(tracker.get_latest_entity_values("plant_part"), None)
+        adjective = next(tracker.get_latest_entity_values("environment_adjective"), None)
+        environment = next(tracker.get_latest_entity_values("environment"), None)
+        dispatcher.utter_message(template="utter_answer_question",placeholder=plant_part +" " + adjective + " " + environment)
+
+        return []     
+

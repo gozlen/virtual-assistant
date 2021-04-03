@@ -93,6 +93,9 @@ nlu:
     - what kind of [stem](plant_part) is best under [high](environment_adjective) [rainfall](environment)
     - what type of [roots](plant_part) grow in [low](environment_adjective) [temperature](environment)
     - what [leaves](plant_part) [high](environment_adjective) [sunlight](environment)?
+    - what [leaves](plant_part) [high](environment_adjective) [sunlight](environment)
+    - what [leaves](plant_part) [low](environment_adjective) [wind](environment)
+    - hey there could you tell me what type of [leaves](plant_part) is the best in [low](environment_adjective) [wind](environment) environments
 - intent: ask_question_about_location
   examples: |
     - where are we

@@ -3,6 +3,7 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- ask_question_about_plant_in_environment
 - ask_question_about_physiological_process
 - ask_question_about_environment
 - ask_question_about_part_advantage
@@ -27,4 +28,5 @@ actions:
 - action_answer_question_about_environment
 - action_answer_question_about_part_advantage
 - action_answer_question_about_physiological_process
+- action_answer_question_about_plant_in_environment
 - action_answer_question_about_plant_part
