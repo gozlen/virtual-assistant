@@ -60,6 +60,8 @@ nlu:
     - where [thick-skinned](adjective) [leaves](plant_part) gro
     - temme about [branching](adjective) [roots](plant_part)
     - i dont get [non-branching](adjective) [roots](plant_part)
+    - in what environments are [long](adjective) [stems](plant_part) good
+    - where are [non-branching](adjective) [roots](plant_part) good
 - intent: ask_question_about_environment
   examples: |
     - What should I keep in mind when the [wind](environment) is [high](environment_adjective)?
@@ -85,6 +87,8 @@ nlu:
     - what is [transpiration](physiological_process) in plants
     - what was [transpiration](physiological_process) again
     - what does [photosynthesis](physiological_process) do again
+    - whats [photosynthesis](physiological_process)
+    - what was [respiration](physiological_process) again
 - intent: ask_question_about_plant_in_environment
   examples: |
     - what [roots](plant_part) are good when the [wind](environment) is [high](environment_adjective)
@@ -96,6 +100,7 @@ nlu:
     - what [leaves](plant_part) [high](environment_adjective) [sunlight](environment)
     - what [leaves](plant_part) [low](environment_adjective) [wind](environment)
     - hey there could you tell me what type of [leaves](plant_part) is the best in [low](environment_adjective) [wind](environment) environments
+    - whats the best kind of [leaves](plant_part) in [high](environment_adjective) [rainfall](environment) environments
 - intent: ask_question_about_location
   examples: |
     - where are we
@@ -106,12 +111,16 @@ nlu:
     - what's this planet
     - remind me where we are
     - repeat what the environment is
+    - where are we now
+    - can you tell me about the current environment again
 - intent: ask_question_about_identity
   examples: |
     - are you a real person
     - are you a robot
     - who are you
     - tell me about yourself
+    - are you even real
+    - you're just a fake bot arent you
 - intent: ask_about_experiment
   examples: |
     - what are we doing here
@@ -121,6 +130,8 @@ nlu:
     - why are we doing this
     - why are we here
     - what do you do
+    - why are we here again?
+    - what the hell are we doing here
 - intent: ask_how_are_you
   examples: |
     - how are you
@@ -128,6 +139,7 @@ nlu:
     - what's up
     - how you doing
     - how's life
+    - you doing okay?
 - lookup: plant_part
   examples: |
     - leaves

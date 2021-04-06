@@ -3,10 +3,14 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- ask_question_about_plant_in_environment
+- ask_about_experiment
+- ask_question_about_identity
+- ask_question_about_location
+- ask_how_are_you
 - ask_question_about_physiological_process
-- ask_question_about_environment
+- ask_question_about_plant_in_environment
 - ask_question_about_part_advantage
+- ask_question_about_environment
 - ask_question_about_plant_part
 - greet
 - goodbye
@@ -23,6 +27,14 @@ responses:
   - text: Here you go you ding dong this is a {placeholder}
   utter_goodbye:
   - text: Bye
+  utter_answer_about_experiment:
+  - text: this is an experiment
+  utter_answer_how_are_you:
+  - text: I'm great!
+  utter_answer_about_identity:
+  - text: I am a bot
+  utter_answer_about_location:
+  - text: We are here
 actions:
 - action_answer_question
 - action_answer_question_about_environment
@@ -30,3 +42,7 @@ actions:
 - action_answer_question_about_physiological_process
 - action_answer_question_about_plant_in_environment
 - action_answer_question_about_plant_part
+- utter_answer_about_experiment
+- utter_answer_about_identity
+- utter_answer_about_location
+- utter_answer_how_are_you

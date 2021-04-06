@@ -1,12 +1,3 @@
-# This files contains your custom actions which can be used to run
-# custom Python code.
-
-# See this guide on how to implement these action:
-# https://rasa.com/docs/rasa/custom-actions
-
-
-# This is a simple example for a custom action which utters "Hello World!"
-
 from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
@@ -36,13 +27,10 @@ class ActionHelloWorld(Action):
 #             tracker: Tracker,
 #             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-
 #         plant_part = next(tracker.get_latest_entity_values("plant_part"), None)
 #         adjective = next(tracker.get_latest_entity_values("adjective"), None)
 #         dispatcher.utter_message(template="utter_answer_question",placeholder = plant_part +" " + adjective)
-
 #         return []
-
 
 class ActionAnswerQuestionAboutPhysiologicalProcess(Action):
 

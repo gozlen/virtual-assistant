@@ -36,3 +36,23 @@ rules:
   steps:
   - intent: ask_question_about_plant_in_environment
   - action: action_answer_question_about_plant_in_environment
+
+- rule: Answer about experiment
+  steps:
+  - intent: ask_about_experiment
+  - action: utter_answer_about_experiment
+
+- rule: Answer about identity
+  steps:
+  - intent: ask_question_about_identity
+  - action: utter_answer_about_identity
+  
+- rule: Answer about location
+  steps:
+  - intent: ask_question_about_location
+  - action: utter_answer_about_location
+
+- rule: Answer how are you
+  steps:
+  - intent: ask_how_are_you
+  - action: utter_answer_how_are_you
