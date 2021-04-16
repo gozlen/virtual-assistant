@@ -91,6 +91,34 @@ class ActionAnswerQuestionAboutPartAdvantage(Action):
             elif adjective.lower() == 'thin':
                 message = '115'
 
+        elif 'stem' in plant_part:
+            if adjective.lower() == 'long':
+                message = '120'
+            elif adjective.lower() == 'short':
+                message = '121'
+            if adjective.lower() == 'thick':
+                message = '122'
+            elif adjective.lower() == 'thin':
+                message = '123'
+            if adjective.lower() == 'bark':
+                message = '124'
+            elif 'no' in adjective.lower() and 'bark' in adjective.lower():
+                message = '125'
+
+        elif 'leav' in plant_part or 'leaf' in plant_part:
+            if adjective.lower() == 'thick':
+                message = '130'
+            elif adjective.lower() == 'thin':
+                message = '131'
+            if adjective.lower() == 'small':
+                message = '132'
+            elif adjective.lower() == 'large':
+                message = '133'
+            if 'thick' in  adjective.lower()  and 'skinned' in  adjective.lower() :
+                message = '134'
+            elif 'thin' in adjective.lower() and 'skinned' in adjective.lower():
+                message = '135'
+
 
         dispatcher.utter_message(text = message)
 

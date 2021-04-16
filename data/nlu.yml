@@ -60,8 +60,20 @@ nlu:
     - where [thick-skinned](adjective) [leaves](plant_part) gro
     - temme about [branching](adjective) [roots](plant_part)
     - i dont get [non-branching](adjective) [roots](plant_part)
+    - tell me about [non branching]{"entity": "adjective", "value": "non-branching"} [routes]{"entity": "plant_part", "value": "roots"}
     - in what environments are [long](adjective) [stems](plant_part) good
     - where are [non-branching](adjective) [roots](plant_part) good
+    - where are [routes]{"entity": "plant_part", "value": "roots"} good
+    - where do [deep](adjective) [routes]{"entity": "plant_part", "value": "roots"} work best
+    - tell me about [branching](adjective) [routes]{"entity": "plant_part", "value": "roots"}
+    - i dont get [shallow](adjective) [routes]{"entity": "plant_part", "value": "roots"}
+    - when are [non-branching](adjective) [roots](plant_part) good
+    - tell me about non [branching](adjective) [routes]{"entity": "plant_part", "value": "roots"}
+    - i dont get [non branching]{"entity": "adjective", "value": "non-branching"} [roots](plant_part)
+    - tell me about [non branching]{"entity": "adjective", "value": "non-branching"} [route]{"entity": "plant_part", "value": "roots"}
+    - i dont understand [non branching]{"entity": "adjective", "value": "non-branching"} [roots](plant_part)
+    - wherea re [thick-skinned](adjective) [leaves](plant_part) best
+    - tell me about [thick skinned]{"entity": "adjective", "value": "thick-skinned"} [leaves](plant_part)
 - intent: ask_question_about_environment
   examples: |
     - What should I keep in mind when the [wind](environment) is [high](environment_adjective)?
@@ -76,7 +88,7 @@ nlu:
     - whats good in [high](environment_adjective) [rainfall](environment)
     - what grows in [low](environment_adjective) [sunlight](environment)
     - whats good when [nutrients](environment) [low](environment_adjective)
-    - what [stem](plant_part) is good when the [rainfall](environment) is [high](environment_adjective)
+    - how does a [high](environment_adjective) [water table](environment) affect a plant
 - intent: ask_question_about_physiological_process
   examples: |
     - what [osmosis](physiological_process) do
@@ -92,6 +104,7 @@ nlu:
     - what was [respiration](physiological_process) again
 - intent: ask_question_about_plant_in_environment
   examples: |
+    - what [stem](plant_part) is good when the [rainfall](environment) is [high](environment_adjective)
     - what [roots](plant_part) are good when the [wind](environment) is [high](environment_adjective)
     - which [stem] should i choose when the [water table](environment) is [low](environment_adjective)
     - which [leaves](plant_part) are good in [low](environment_adjective) [nutrition](environment) environments?
@@ -157,6 +170,36 @@ nlu:
     - tell me about the flora in yosimete
     - when do cherries blossom in japan
     - how do monkeys climb trees
+
+
+
+- synonym: non-branching
+  examples: |
+    - non branching
+- synonym: thick-skinned
+  examples: |
+    - thick skinned
+- synonym: thin-skinned
+  examples: |
+    - thin skinned
+- synonym: roots
+  examples: |
+    - routes
+    - route
+    - root
+- synonym: leaves
+  examples: |
+    - leaf
+    - leave
+- synonym: stem
+  examples: |
+    - stems
+- synonym: big
+  examples: |
+    - large
+    - huge
+
+
 - lookup: plant_part
   examples: |
     - leaves
