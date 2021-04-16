@@ -76,6 +76,7 @@ nlu:
     - whats good in [high](environment_adjective) [rainfall](environment)
     - what grows in [low](environment_adjective) [sunlight](environment)
     - whats good when [nutrients](environment) [low](environment_adjective)
+    - what [stem](plant_part) is good when the [rainfall](environment) is [high](environment_adjective)
 - intent: ask_question_about_physiological_process
   examples: |
     - what [osmosis](physiological_process) do
@@ -101,6 +102,11 @@ nlu:
     - what [leaves](plant_part) [low](environment_adjective) [wind](environment)
     - hey there could you tell me what type of [leaves](plant_part) is the best in [low](environment_adjective) [wind](environment) environments
     - whats the best kind of [leaves](plant_part) in [high](environment_adjective) [rainfall](environment) environments
+    - what type of [roots](plant_part) should i get when the [wind](environment) is [low](environment_adjective)
+    - what [leaves](plant_part) thrive in [low](environment_adjective) [temperature](environment) environments
+    - what [roots](plant_part) work in [low](environment_adjective) [water table](environment)
+    - what type of [roots](plant_part) are [suitable](environment) when the [nutrients](environment) are [low](environment_adjective)
+    - what kind of [roots](plant_part) when [temperature](environment) is [low](environment_adjective)
 - intent: ask_question_about_location
   examples: |
     - where are we
@@ -140,6 +146,17 @@ nlu:
     - how you doing
     - how's life
     - you doing okay?
+- intent: out_of_scope
+  examples: |
+    - who did 9/11
+    - what is 2+2
+    - which tress has the largest [leaves](plant_part)
+    - what plant has the [thickest](adjective) [stem](plant_part)
+    - do bamboos have [deep](adjective) [roots](plant_part)
+    - which country has the most kinds of plants
+    - tell me about the flora in yosimete
+    - when do cherries blossom in japan
+    - how do monkeys climb trees
 - lookup: plant_part
   examples: |
     - leaves

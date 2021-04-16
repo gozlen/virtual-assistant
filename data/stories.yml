@@ -191,3 +191,74 @@ stories:
   - action: utter_answer_about_location
   - intent: ask_how_are_you
   - action: utter_answer_how_are_you
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_question_about_environment
+    entities:
+    - plant_part: stem
+    - environment: rainfall
+    - environment_adjective: high
+  - action: action_answer_question_about_environment
+  - intent: ask_question_about_plant_in_environment
+    entities:
+    - plant_part: roots
+    - environment: wind
+    - environment_adjective: low
+  - action: action_answer_question_about_plant_in_environment
+  - intent: ask_question_about_plant_in_environment
+    entities:
+    - plant_part: leaves
+    - environment_adjective: low
+    - environment: temperature
+  - action: action_answer_question_about_plant_in_environment
+  - intent: ask_question_about_plant_in_environment
+    entities:
+    - plant_part: roots
+    - environment_adjective: low
+    - environment: water table
+  - action: action_answer_question_about_plant_in_environment
+  - intent: ask_question_about_plant_in_environment
+    entities:
+    - plant_part: roots
+    - environment: suitable
+    - environment: nutrients
+    - environment_adjective: low
+  - action: action_answer_question_about_plant_in_environment
+  - intent: ask_question_about_plant_in_environment
+    entities:
+    - plant_part: roots
+    - environment: temperature
+    - environment_adjective: low
+  - action: action_answer_question_about_plant_in_environment
+  - intent: nlu_fallback
+
+- story: interactive_story_1
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - intent: out_of_scope
+    entities:
+    - plant_part: leaves
+  - action: utter_out_of_scope
+  - intent: out_of_scope
+    entities:
+    - adjective: thickest
+    - plant_part: stem
+  - action: utter_out_of_scope
+  - intent: out_of_scope
+    entities:
+    - adjective: deep
+    - plant_part: roots
+  - action: utter_out_of_scope
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+
+- story: interactive_story_1
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - intent: out_of_scope
+  - action: utter_out_of_scope

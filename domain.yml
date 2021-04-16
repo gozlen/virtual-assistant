@@ -3,14 +3,15 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- out_of_scope
+- ask_question_about_environment
+- ask_question_about_plant_in_environment
 - ask_about_experiment
 - ask_question_about_identity
 - ask_question_about_location
 - ask_how_are_you
 - ask_question_about_physiological_process
-- ask_question_about_plant_in_environment
 - ask_question_about_part_advantage
-- ask_question_about_environment
 - ask_question_about_plant_part
 - greet
 - goodbye
@@ -35,6 +36,8 @@ responses:
   - text: I am a bot
   utter_answer_about_location:
   - text: We are here
+  utter_out_of_scope:
+  - text: Sorry, I can't handle that request.
 actions:
 - action_answer_question
 - action_answer_question_about_environment
@@ -46,3 +49,4 @@ actions:
 - utter_answer_about_identity
 - utter_answer_about_location
 - utter_answer_how_are_you
+- utter_out_of_scope
