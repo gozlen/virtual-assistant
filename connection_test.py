@@ -1,6 +1,6 @@
 import requests
 
-data = '{"sender": "test_user", "message": "what environments are shallow roots good in"}'
+data = '{"sender": "test_user", "message": "how does low rainfall affect plants"}'
 url = "http://206.189.104.159:5005/webhooks/rest/webhook"
 response = requests.post(url, data)
 print(response.content)

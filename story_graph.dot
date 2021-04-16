@@ -3,14 +3,15 @@ digraph  {
 "-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
 1 [class=active, fontsize=12, label=action_session_start];
 2 [class=active, fontsize=12, label=action_answer_question_about_environment];
-6 [class="intent dashed active", label="  ?  ", shape=rect];
-7 [class="intent active", fillcolor=lightblue, label="whats good in high wind environments", shape=rect, style=filled];
-8 [class="intent active", fillcolor=lightblue, label="what is important in low rainfall", shape=rect, style=filled];
+3 [class=active, fontsize=12, label=action_answer_question_about_physiological_process];
+4 [class="intent dashed active", label="  ?  ", shape=rect];
+5 [class="intent active", fillcolor=lightblue, label="how does low rainfall affect plants", shape=rect, style=filled];
+6 [class="intent active", fillcolor=lightblue, label="tell me about photosynthesis", shape=rect, style=filled];
 0 -> "-1"  [class="", key=NONE, label=""];
 0 -> 1  [class=active, key=NONE, label=""];
-1 -> 7  [class=active, key=0];
-2 -> 6  [class=active, key=NONE, label=""];
-2 -> 8  [class=active, key=0];
-7 -> 2  [class=active, key=0];
-8 -> 2  [class=active, key=0];
+1 -> 5  [class=active, key=0];
+2 -> 6  [class=active, key=0];
+3 -> 4  [class=active, key=NONE, label=""];
+5 -> 2  [class=active, key=0];
+6 -> 3  [class=active, key=0];
 }

@@ -93,6 +93,7 @@ nlu:
     - whats best when the [nutrients](environment) are [low](environment_adjective)
     - whats good when [sunlight](environment) is [high](environment_adjective)
     - what is important in [low](environment_adjective) [rainfall](environment)
+    - how does [low](environment_adjective) [rainfall](environment) affect plants
 - intent: ask_question_about_physiological_process
   examples: |
     - what [osmosis](physiological_process) do
@@ -106,6 +107,7 @@ nlu:
     - what does [photosynthesis](physiological_process) do again
     - whats [photosynthesis](physiological_process)
     - what was [respiration](physiological_process) again
+    - tell me about [photosynthesis](physiological_process)
 - intent: ask_question_about_plant_in_environment
   examples: |
     - what [stem](plant_part) is good when the [rainfall](environment) is [high](environment_adjective)

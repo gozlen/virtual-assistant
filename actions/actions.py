@@ -43,8 +43,25 @@ class ActionAnswerQuestionAboutPhysiologicalProcess(Action):
 
 
         
-        process = next(tracker.get_latest_entity_values("physiological_process"), None)
-        dispatcher.utter_message(template="utter_answer_question",placeholder = process)
+        process = next(tracker.get_latest_entity_values("physiological_process"), None).lower()
+
+        if process == None:
+            dispatcher.utter_message(text = "I'm sorry, I didn't quite catch that")
+            return []
+        elif 'osmosis' in process:
+            message = '301'
+        elif 'water transport' in process:
+            message = '302'
+        elif 'transpiration' in process:
+            message = '303'
+        elif 'photosynthesis' in process:
+            message = '304'
+        elif 'nutrient transport' in process:
+            message = '305'
+        elif 'respiration' in process:
+            message = '306'
+
+        dispatcher.utter_message(text = message)
 
         return []
 
@@ -65,7 +82,7 @@ class ActionAnswerQuestionAboutEnvironment(Action):
             dispatcher.utter_message(text = "I'm sorry, I didn't quite catch that")
             return []
 
-        if 'wind' in environment:
+        elif 'wind' in environment:
             if adjective == 'low':
                 message = '210'
             elif adjective == 'high':
@@ -121,7 +138,7 @@ class ActionAnswerQuestionAboutPartAdvantage(Action):
             dispatcher.utter_message(text = "I'm sorry, I didn't quite catch that")
             return []
 
-        if 'root' in plant_part:
+        elif 'root' in plant_part:
             if adjective.lower() == 'branching':
                 message = '110'
             elif adjective.lower() == 'non-branching' or adjective.lower() == 'non branching':
@@ -181,8 +198,20 @@ class ActionAnswerQuestionAboutPlantPart(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
 
+
         plant_part = next(tracker.get_latest_entity_values("plant_part"), None)
-        dispatcher.utter_message(template="utter_answer_question",placeholder=plant_part)
+
+        if plant_part == None:
+            dispatcher.utter_message(text = "I'm sorry, I didn't quite catch that")
+            return []
+        elif 'root' in plant_part or 'rout' in plant_part:
+            message = '307'
+        elif 'stem' in plant_part:
+            message = '308'
+        elif 'leaf' in plant_part or 'leav' in plant_part:
+            message = '309'
+
+        dispatcher.utter_message(text = message)
 
         return []        
 
