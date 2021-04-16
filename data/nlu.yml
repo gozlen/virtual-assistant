@@ -89,6 +89,10 @@ nlu:
     - what grows in [low](environment_adjective) [sunlight](environment)
     - whats good when [nutrients](environment) [low](environment_adjective)
     - how does a [high](environment_adjective) [water table](environment) affect a plant
+    - whats good in [high](environment_adjective) [wind](environment) environments
+    - whats best when the [nutrients](environment) are [low](environment_adjective)
+    - whats good when [sunlight](environment) is [high](environment_adjective)
+    - what is important in [low](environment_adjective) [rainfall](environment)
 - intent: ask_question_about_physiological_process
   examples: |
     - what [osmosis](physiological_process) do
@@ -170,23 +174,20 @@ nlu:
     - tell me about the flora in yosimete
     - when do cherries blossom in japan
     - how do monkeys climb trees
-
-
-
 - synonym: non-branching
   examples: |
     - non branching
+- synonym: roots
+  examples: |
+    - routes
+    - route
+    - root
 - synonym: thick-skinned
   examples: |
     - thick skinned
 - synonym: thin-skinned
   examples: |
     - thin skinned
-- synonym: roots
-  examples: |
-    - routes
-    - route
-    - root
 - synonym: leaves
   examples: |
     - leaf
@@ -198,8 +199,6 @@ nlu:
   examples: |
     - large
     - huge
-
-
 - lookup: plant_part
   examples: |
     - leaves

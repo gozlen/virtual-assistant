@@ -58,9 +58,49 @@ class ActionAnswerQuestionAboutEnvironment(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
 
-        environment = next(tracker.get_latest_entity_values("environment"), None)
-        adjective = next(tracker.get_latest_entity_values("environment_adjective"), None)
-        dispatcher.utter_message(template="utter_answer_question",placeholder = environment +" " + adjective)
+        environment = next(tracker.get_latest_entity_values("environment"), None).lower()
+        adjective = next(tracker.get_latest_entity_values("environment_adjective"), None).lower()
+
+        if environment == None or adjective == None:
+            dispatcher.utter_message(text = "I'm sorry, I didn't quite catch that")
+            return []
+
+        if 'wind' in environment:
+            if adjective == 'low':
+                message = '210'
+            elif adjective == 'high':
+                message = '211'
+        elif 'sunlight' in environment:
+            if adjective == 'low':
+                message = '220'
+            elif adjective == 'high':
+                message = '221'
+        elif 'rainfall' in environment:
+            if adjective == 'low':
+                message = '230'
+            elif adjective == 'high':
+                message = '231'
+        elif 'nutrients' in environment:
+            if adjective == 'low':
+                message = '240'
+            elif adjective == 'high':
+                message = '241'
+        elif 'water table' in environment:
+            if adjective == 'low':
+                message = '250'
+            elif adjective == 'high':
+                message = '251'
+        elif 'temperature' in environment:
+            if adjective == 'low':
+                message = '260'
+            elif adjective == 'high':
+                message = '261'
+        
+        else: 
+            message = "I'm sorry I didn't quite catch that."
+
+
+        dispatcher.utter_message(text = message)
 
         return []
 
@@ -76,6 +116,10 @@ class ActionAnswerQuestionAboutPartAdvantage(Action):
 
         plant_part = next(tracker.get_latest_entity_values("plant_part"), None)
         adjective = next(tracker.get_latest_entity_values("adjective"), None)
+
+        if plant_part == None or adjective == None:
+            dispatcher.utter_message(text = "I'm sorry, I didn't quite catch that")
+            return []
 
         if 'root' in plant_part:
             if adjective.lower() == 'branching':
@@ -118,6 +162,9 @@ class ActionAnswerQuestionAboutPartAdvantage(Action):
                 message = '134'
             elif 'thin' in adjective.lower() and 'skinned' in adjective.lower():
                 message = '135'
+
+        else: 
+            message = "I'm sorry I didn't quite catch that."
 
 
         dispatcher.utter_message(text = message)
