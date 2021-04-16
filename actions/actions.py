@@ -76,7 +76,23 @@ class ActionAnswerQuestionAboutPartAdvantage(Action):
 
         plant_part = next(tracker.get_latest_entity_values("plant_part"), None)
         adjective = next(tracker.get_latest_entity_values("adjective"), None)
-        dispatcher.utter_message(template="utter_answer_question",placeholder = plant_part +" " + adjective)
+
+        if 'root' in plant_part:
+            if adjective.lower() == 'branching':
+                message = '110'
+            elif adjective.lower() == 'non-branching' or adjective.lower() == 'non branching':
+                message = '111'
+            if adjective.lower() == 'deep':
+                message = '112'
+            elif adjective.lower() == 'shallow':
+                message = '113'
+            if adjective.lower() == 'thick':
+                message = '114'
+            elif adjective.lower() == 'thin':
+                message = '115'
+
+
+        dispatcher.utter_message(text = message)
 
         return []        
 
