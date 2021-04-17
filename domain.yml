@@ -24,8 +24,6 @@ entities:
 responses:
   utter_greet:
   - text: Hey! There I'm your peronal assistant
-  utter_answer_question:
-  - text: '{placeholder}'
   utter_goodbye:
   - text: Bye
   utter_answer_about_experiment:
@@ -37,7 +35,7 @@ responses:
   utter_answer_about_location:
   - text: We are here
   utter_out_of_scope:
-  - text: Sorry, I can't handle that request.
+  - text: '999'
 actions:
 - action_answer_question
 - action_answer_question_about_environment

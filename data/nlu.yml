@@ -131,6 +131,8 @@ nlu:
     - what [route]{"entity": "plant_part", "value": "roots"} when [sunlight](environment) is [high](environment_adjective)
     - what [root]{"entity": "plant_part", "value": "roots"} should i choose when the environment has a [high](environment_adjective) [wind](environment)
     - what [routes]{"entity": "plant_part", "value": "roots"} are best when [rainfall](environment) is [low](environment_adjective)
+    - what [leaves](plant_part) should i [pick](adjective) when the [rainfall](environment) is [high](environment_adjective)
+    - what [leaf]{"entity": "plant_part", "value": "leaves"} is suited for a [high](environment_adjective) [wind](environment)y environment
 - intent: ask_question_about_location
   examples: |
     - where are we

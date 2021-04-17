@@ -18,20 +18,6 @@ class ActionHelloWorld(Action):
         return []
 
 
-# class ActionAnswerQuestion(Action):
-
-#     def name(self) -> Text:
-#         return "action_answer_question"
-
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-#         plant_part = next(tracker.get_latest_entity_values("plant_part"), None)
-#         adjective = next(tracker.get_latest_entity_values("adjective"), None)
-#         dispatcher.utter_message(template="utter_answer_question",placeholder = plant_part +" " + adjective)
-#         return []
-
 class ActionAnswerQuestionAboutPhysiologicalProcess(Action):
 
     def name(self) -> Text:
@@ -281,9 +267,67 @@ class ActionAnswerQuestionAboutPlantInEnvironment(Action):
                     message = '400'
                 
         elif 'stem' in plant_part:
-            pass
+            if 'wind' in environment:
+                if adjective == 'low':
+                    message = '400'
+                elif adjective == 'high':
+                    message = '408'
+            elif 'sunlight' in environment:
+                if adjective == 'low':
+                    message = '409'
+                elif adjective == 'high':
+                    message = '410'
+            elif 'rainfall' in environment:
+                if adjective == 'low':
+                    message = '411'
+                elif adjective == 'high':
+                    message = '400'
+            elif 'nutrients' in environment:
+                if adjective == 'low':
+                    message = '412'
+                elif adjective == 'high':
+                    message = '400'
+            elif 'water table' in environment:
+                if adjective == 'low':
+                    message = '400'
+                elif adjective == 'high':
+                    message = '400'
+            elif 'temperature' in environment:
+                if adjective == 'low':
+                    message = '413'
+                elif adjective == 'high':
+                    message = '414'
         elif 'leaf' in plant_part or 'leav' in plant_part:
-            pass
+            if 'wind' in environment:
+                if adjective == 'low':
+                    message = '400'
+                elif adjective == 'high':
+                    message = '415'
+            elif 'sunlight' in environment:
+                if adjective == 'low':
+                    message = '416'
+                elif adjective == 'high':
+                    message = '400'
+            elif 'rainfall' in environment:
+                if adjective == 'low':
+                    message = '417'
+                elif adjective == 'high':
+                    message = '418'
+            elif 'nutrients' in environment:
+                if adjective == 'low':
+                    message = '400'
+                elif adjective == 'high':
+                    message = '400'
+            elif 'water table' in environment:
+                if adjective == 'low':
+                    message = '400'
+                elif adjective == 'high':
+                    message = '400'
+            elif 'temperature' in environment:
+                if adjective == 'low':
+                    message = '419'
+                elif adjective == 'high':
+                    message = '420'
         else:
             message = '999'
 

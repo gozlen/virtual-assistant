@@ -117,3 +117,19 @@ stories:
     - environment: rainfall
     - environment_adjective: low
   - action: action_answer_question_about_plant_in_environment
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_question_about_plant_in_environment
+    entities:
+    - plant_part: leaves
+    - adjective: pick
+    - environment: rainfall
+    - environment_adjective: high
+  - action: action_answer_question_about_plant_in_environment
+  - intent: ask_question_about_plant_in_environment
+    entities:
+    - plant_part: leaves
+    - environment_adjective: high
+    - environment: wind
+  - action: action_answer_question_about_plant_in_environment
