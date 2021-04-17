@@ -1,17 +1,26 @@
 digraph  {
 0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
 "-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
-1 [class=active, fontsize=12, label=action_session_start];
-2 [class=active, fontsize=12, label=action_answer_question_about_environment];
-3 [class=active, fontsize=12, label=action_answer_question_about_physiological_process];
-4 [class="intent dashed active", label="  ?  ", shape=rect];
-5 [class="intent active", fillcolor=lightblue, label="how does low rainfall affect plants", shape=rect, style=filled];
-6 [class="intent active", fillcolor=lightblue, label="tell me about photosynthesis", shape=rect, style=filled];
+1 [class="", fontsize=12, label=action_answer_question_about_part_advantage];
+"-4" [class=ellipsis, label="..."];
+3 [class="", fontsize=12, label=action_answer_question_about_environment];
+"-6" [class=ellipsis, label="..."];
+5 [class=active, fontsize=12, label=action_answer_question_about_plant_in_environment];
+8 [class="intent dashed active", label="  ?  ", shape=rect];
+9 [class=intent, fillcolor=lightblue, label=None, shape=rect, style=filled];
+10 [class=intent, fillcolor=lightblue, label=None, shape=rect, style=filled];
+11 [class="intent active", fillcolor=lightblue, label="what route when sunlight is high", shape=rect, style=filled];
+12 [class="intent active", fillcolor=lightblue, label="what routes are best when rainfall is low", shape=rect, style=filled];
 0 -> "-1"  [class="", key=NONE, label=""];
-0 -> 1  [class=active, key=NONE, label=""];
-1 -> 5  [class=active, key=0];
-2 -> 6  [class=active, key=0];
-3 -> 4  [class=active, key=NONE, label=""];
-5 -> 2  [class=active, key=0];
-6 -> 3  [class=active, key=0];
+0 -> 9  [class="", key=0];
+0 -> 10  [class="", key=0];
+0 -> 11  [class=active, key=0];
+1 -> "-4"  [class="", key=NONE, label=""];
+3 -> "-6"  [class="", key=NONE, label=""];
+5 -> 8  [class=active, key=NONE, label=""];
+5 -> 12  [class=active, key=0];
+9 -> 1  [class="", key=0];
+10 -> 3  [class="", key=0];
+11 -> 5  [class=active, key=0];
+12 -> 5  [class=active, key=0];
 }

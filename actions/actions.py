@@ -46,7 +46,7 @@ class ActionAnswerQuestionAboutPhysiologicalProcess(Action):
         process = next(tracker.get_latest_entity_values("physiological_process"), None).lower()
 
         if process == None:
-            dispatcher.utter_message(text = "I'm sorry, I didn't quite catch that")
+            dispatcher.utter_message(text = "999")
             return []
         elif 'osmosis' in process:
             message = '301'
@@ -60,6 +60,8 @@ class ActionAnswerQuestionAboutPhysiologicalProcess(Action):
             message = '305'
         elif 'respiration' in process:
             message = '306'
+        else:
+            message = '999'
 
         dispatcher.utter_message(text = message)
 
@@ -79,7 +81,7 @@ class ActionAnswerQuestionAboutEnvironment(Action):
         adjective = next(tracker.get_latest_entity_values("environment_adjective"), None).lower()
 
         if environment == None or adjective == None:
-            dispatcher.utter_message(text = "I'm sorry, I didn't quite catch that")
+            dispatcher.utter_message(text = "999")
             return []
 
         elif 'wind' in environment:
@@ -113,8 +115,9 @@ class ActionAnswerQuestionAboutEnvironment(Action):
             elif adjective == 'high':
                 message = '261'
         
-        else: 
-            message = "I'm sorry I didn't quite catch that."
+        else:
+            message = '999'
+
 
 
         dispatcher.utter_message(text = message)
@@ -135,7 +138,7 @@ class ActionAnswerQuestionAboutPartAdvantage(Action):
         adjective = next(tracker.get_latest_entity_values("adjective"), None)
 
         if plant_part == None or adjective == None:
-            dispatcher.utter_message(text = "I'm sorry, I didn't quite catch that")
+            dispatcher.utter_message(text = "999")
             return []
 
         elif 'root' in plant_part:
@@ -151,6 +154,9 @@ class ActionAnswerQuestionAboutPartAdvantage(Action):
                 message = '114'
             elif adjective.lower() == 'thin':
                 message = '115'
+            else:
+                message = '999'
+
 
         elif 'stem' in plant_part:
             if adjective.lower() == 'long':
@@ -165,6 +171,8 @@ class ActionAnswerQuestionAboutPartAdvantage(Action):
                 message = '124'
             elif 'no' in adjective.lower() and 'bark' in adjective.lower():
                 message = '125'
+            else:
+                message = '999'
 
         elif 'leav' in plant_part or 'leaf' in plant_part:
             if adjective.lower() == 'thick':
@@ -179,9 +187,11 @@ class ActionAnswerQuestionAboutPartAdvantage(Action):
                 message = '134'
             elif 'thin' in adjective.lower() and 'skinned' in adjective.lower():
                 message = '135'
+            else:
+                message = '999'
 
-        else: 
-            message = "I'm sorry I didn't quite catch that."
+        else:
+            message = '999'
 
 
         dispatcher.utter_message(text = message)
@@ -202,7 +212,7 @@ class ActionAnswerQuestionAboutPlantPart(Action):
         plant_part = next(tracker.get_latest_entity_values("plant_part"), None)
 
         if plant_part == None:
-            dispatcher.utter_message(text = "I'm sorry, I didn't quite catch that")
+            dispatcher.utter_message(text = "999")
             return []
         elif 'root' in plant_part or 'rout' in plant_part:
             message = '307'
@@ -210,7 +220,8 @@ class ActionAnswerQuestionAboutPlantPart(Action):
             message = '308'
         elif 'leaf' in plant_part or 'leav' in plant_part:
             message = '309'
-
+        else:
+            message = '999'
         dispatcher.utter_message(text = message)
 
         return []        
@@ -224,10 +235,60 @@ class ActionAnswerQuestionAboutPlantInEnvironment(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        plant_part = next(tracker.get_latest_entity_values("plant_part"), None)
-        adjective = next(tracker.get_latest_entity_values("environment_adjective"), None)
-        environment = next(tracker.get_latest_entity_values("environment"), None)
-        dispatcher.utter_message(template="utter_answer_question",placeholder=plant_part +" " + adjective + " " + environment)
+        plant_part = next(tracker.get_latest_entity_values("plant_part"), None).lower()
+        adjective = next(tracker.get_latest_entity_values("environment_adjective"), None).lower()
+        environment = next(tracker.get_latest_entity_values("environment"), None).lower()
+
+
+        if plant_part == None or adjective == None or environment == None:
+            dispatcher.utter_message(text = "999")
+            return []
+
+        if adjective != 'low' and adjective != 'high':
+            dispatcher.utter_message(text = "999")
+            return []
+
+        if 'root' in plant_part or 'rout' in plant_part:
+            if 'wind' in environment:
+                if adjective == 'low':
+                    message = '400'
+                elif adjective == 'high':
+                    message = '401'
+            elif 'sunlight' in environment:
+                if adjective == 'low':
+                    message = '400'
+                elif adjective == 'high':
+                    message = '400'
+            elif 'rainfall' in environment:
+                if adjective == 'low':
+                    message = '402'
+                elif adjective == 'high':
+                    message = '400'
+            elif 'nutrients' in environment:
+                if adjective == 'low':
+                    message = '404'
+                elif adjective == 'high':
+                    message = '400'
+            elif 'water table' in environment:
+                if adjective == 'low':
+                    message = '405'
+                elif adjective == 'high':
+                    message = '406'
+            elif 'temperature' in environment:
+                if adjective == 'low':
+                    message = '407'
+                elif adjective == 'high':
+                    message = '400'
+                
+        elif 'stem' in plant_part:
+            pass
+        elif 'leaf' in plant_part or 'leav' in plant_part:
+            pass
+        else:
+            message = '999'
+
+        
+        dispatcher.utter_message(text = message)
 
         return []     
 

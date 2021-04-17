@@ -94,6 +94,7 @@ nlu:
     - whats good when [sunlight](environment) is [high](environment_adjective)
     - what is important in [low](environment_adjective) [rainfall](environment)
     - how does [low](environment_adjective) [rainfall](environment) affect plants
+    - what [route]{"entity": "plant_part", "value": "roots"} when [sunlight](environment) is [high](environment_adjective)
 - intent: ask_question_about_physiological_process
   examples: |
     - what [osmosis](physiological_process) do
@@ -126,6 +127,10 @@ nlu:
     - what [roots](plant_part) work in [low](environment_adjective) [water table](environment)
     - what type of [roots](plant_part) are [suitable](environment) when the [nutrients](environment) are [low](environment_adjective)
     - what kind of [roots](plant_part) when [temperature](environment) is [low](environment_adjective)
+    - what [roots](plant_part) should i choose when the [nutrients](environment) are [low](environment_adjective)
+    - what [route]{"entity": "plant_part", "value": "roots"} when [sunlight](environment) is [high](environment_adjective)
+    - what [root]{"entity": "plant_part", "value": "roots"} should i choose when the environment has a [high](environment_adjective) [wind](environment)
+    - what [routes]{"entity": "plant_part", "value": "roots"} are best when [rainfall](environment) is [low](environment_adjective)
 - intent: ask_question_about_location
   examples: |
     - where are we
