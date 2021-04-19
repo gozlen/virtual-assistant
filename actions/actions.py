@@ -29,12 +29,13 @@ class ActionAnswerQuestionAboutPhysiologicalProcess(Action):
 
 
         
-        process = next(tracker.get_latest_entity_values("physiological_process"), None).lower()
+        process = next(tracker.get_latest_entity_values("physiological_process"), None)
 
         if process == None:
             dispatcher.utter_message(text = "999")
             return []
-        elif 'osmosis' in process:
+        process = process.lower()
+        if 'osmosis' in process:
             message = '301'
         elif 'water transport' in process:
             message = '302'
@@ -63,14 +64,18 @@ class ActionAnswerQuestionAboutEnvironment(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
 
-        environment = next(tracker.get_latest_entity_values("environment"), None).lower()
-        adjective = next(tracker.get_latest_entity_values("environment_adjective"), None).lower()
+        environment = next(tracker.get_latest_entity_values("environment"), None)
+        adjective = next(tracker.get_latest_entity_values("environment_adjective"), None)
 
         if environment == None or adjective == None:
             dispatcher.utter_message(text = "999")
             return []
 
-        elif 'wind' in environment:
+
+        
+        environment = environment.lower()
+        adjective = adjective.lower()
+        if 'wind' in environment:
             if adjective == 'low':
                 message = '210'
             elif adjective == 'high':
@@ -127,51 +132,53 @@ class ActionAnswerQuestionAboutPartAdvantage(Action):
             dispatcher.utter_message(text = "999")
             return []
 
-        elif 'root' in plant_part:
-            if adjective.lower() == 'branching':
+        plant_part = plant_part.lower()
+        adjective = adjective.lower()
+        if 'root' in plant_part:
+            if adjective == 'branching':
                 message = '110'
-            elif adjective.lower() == 'non-branching' or adjective.lower() == 'non branching':
+            elif adjective == 'non-branching' or adjective == 'non branching':
                 message = '111'
-            if adjective.lower() == 'deep':
+            if adjective == 'deep':
                 message = '112'
-            elif adjective.lower() == 'shallow':
+            elif adjective == 'shallow':
                 message = '113'
-            if adjective.lower() == 'thick':
+            if adjective == 'thick':
                 message = '114'
-            elif adjective.lower() == 'thin':
+            elif adjective == 'thin':
                 message = '115'
             else:
                 message = '999'
 
 
         elif 'stem' in plant_part:
-            if adjective.lower() == 'long':
+            if adjective == 'long':
                 message = '120'
-            elif adjective.lower() == 'short':
+            elif adjective == 'short':
                 message = '121'
-            if adjective.lower() == 'thick':
+            if adjective == 'thick':
                 message = '122'
-            elif adjective.lower() == 'thin':
+            elif adjective == 'thin':
                 message = '123'
-            if adjective.lower() == 'bark':
+            if adjective == 'bark':
                 message = '124'
-            elif 'no' in adjective.lower() and 'bark' in adjective.lower():
+            elif 'no' in adjective and 'bark' in adjective:
                 message = '125'
             else:
                 message = '999'
 
         elif 'leav' in plant_part or 'leaf' in plant_part:
-            if adjective.lower() == 'thick':
+            if adjective == 'thick':
                 message = '130'
-            elif adjective.lower() == 'thin':
+            elif adjective == 'thin':
                 message = '131'
-            if adjective.lower() == 'small':
+            if adjective == 'small':
                 message = '132'
-            elif adjective.lower() == 'large':
+            elif adjective == 'large':
                 message = '133'
-            if 'thick' in  adjective.lower()  and 'skinned' in  adjective.lower() :
+            if 'thick' in  adjective  and 'skinned' in  adjective :
                 message = '134'
-            elif 'thin' in adjective.lower() and 'skinned' in adjective.lower():
+            elif 'thin' in adjective and 'skinned' in adjective:
                 message = '135'
             else:
                 message = '999'
@@ -200,7 +207,9 @@ class ActionAnswerQuestionAboutPlantPart(Action):
         if plant_part == None:
             dispatcher.utter_message(text = "999")
             return []
-        elif 'root' in plant_part or 'rout' in plant_part:
+
+        plant_part = plant_part.lower()
+        if  'root' in plant_part or 'rout' in plant_part:
             message = '307'
         elif 'stem' in plant_part:
             message = '308'
@@ -221,15 +230,19 @@ class ActionAnswerQuestionAboutPlantInEnvironment(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        plant_part = next(tracker.get_latest_entity_values("plant_part"), None).lower()
-        adjective = next(tracker.get_latest_entity_values("environment_adjective"), None).lower()
-        environment = next(tracker.get_latest_entity_values("environment"), None).lower()
+        plant_part = next(tracker.get_latest_entity_values("plant_part"), None)
+        adjective = next(tracker.get_latest_entity_values("environment_adjective"), None)
+        environment = next(tracker.get_latest_entity_values("environment"), None)
 
 
         if plant_part == None or adjective == None or environment == None:
             dispatcher.utter_message(text = "999")
             return []
 
+        adjective = adjective.lower()
+        plant_part = plant_part.lower()
+        environment = environment.lower()
+        
         if adjective != 'low' and adjective != 'high':
             dispatcher.utter_message(text = "999")
             return []
