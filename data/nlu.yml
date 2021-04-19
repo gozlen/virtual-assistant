@@ -39,6 +39,8 @@ nlu:
     - what is [stem](plant_part)?
     - what [roots](plant_part)
     - what [leaves](plant_part) do
+    - what is a [leaf]{"entity": "plant_part", "value": "leaves"}
+    - what is a [root]{"entity": "plant_part", "value": "roots"}
 - intent: ask_question_about_part_advantage
   examples: |
     - When is a [thick](adjective) [stem](plant_part) good?
@@ -74,6 +76,9 @@ nlu:
     - i dont understand [non branching]{"entity": "adjective", "value": "non-branching"} [roots](plant_part)
     - wherea re [thick-skinned](adjective) [leaves](plant_part) best
     - tell me about [thick skinned]{"entity": "adjective", "value": "thick-skinned"} [leaves](plant_part)
+    - where should i [pick](adjective) [non branching]{"entity": "adjective", "value": "non-branching"} [roots](plant_part)
+    - i dont get [non branching]{"entity": "adjective", "value": "non-branching"} [roots](plant_part)
+    - where do plants with [thick skinned]{"entity": "adjective", "value": "thick-skinned"} [leaves](plant_part) tend to grow
 - intent: ask_question_about_environment
   examples: |
     - What should I keep in mind when the [wind](environment) is [high](environment_adjective)?
@@ -132,7 +137,7 @@ nlu:
     - what [root]{"entity": "plant_part", "value": "roots"} should i choose when the environment has a [high](environment_adjective) [wind](environment)
     - what [routes]{"entity": "plant_part", "value": "roots"} are best when [rainfall](environment) is [low](environment_adjective)
     - what [leaves](plant_part) should i [pick](adjective) when the [rainfall](environment) is [high](environment_adjective)
-    - what [leaf]{"entity": "plant_part", "value": "leaves"} is suited for a [high](environment_adjective) [wind](environment)y environment
+    - what [leaf]{"entity": "plant_part", "value": "leaves"} is suited for a [high](environment_adjective) [wind](environment) environment
 - intent: ask_question_about_location
   examples: |
     - where are we
@@ -194,13 +199,13 @@ nlu:
 - synonym: thick-skinned
   examples: |
     - thick skinned
-- synonym: thin-skinned
-  examples: |
-    - thin skinned
 - synonym: leaves
   examples: |
     - leaf
     - leave
+- synonym: thin-skinned
+  examples: |
+    - thin skinned
 - synonym: stem
   examples: |
     - stems
