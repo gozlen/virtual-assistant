@@ -77,8 +77,8 @@ nlu:
     - wherea re [thick-skinned](adjective) [leaves](plant_part) best
     - tell me about [thick skinned]{"entity": "adjective", "value": "thick-skinned"} [leaves](plant_part)
     - where should i [pick](adjective) [non branching]{"entity": "adjective", "value": "non-branching"} [roots](plant_part)
-    - i dont get [non branching]{"entity": "adjective", "value": "non-branching"} [roots](plant_part)
     - where do plants with [thick skinned]{"entity": "adjective", "value": "thick-skinned"} [leaves](plant_part) tend to grow
+    - should i [pick](adjective) [thick skinned]{"entity": "adjective", "value": "thick-skinned"} [leaves](plant_part) here
 - intent: ask_question_about_environment
   examples: |
     - What should I keep in mind when the [wind](environment) is [high](environment_adjective)?
@@ -100,6 +100,9 @@ nlu:
     - what is important in [low](environment_adjective) [rainfall](environment)
     - how does [low](environment_adjective) [rainfall](environment) affect plants
     - what [route]{"entity": "plant_part", "value": "roots"} when [sunlight](environment) is [high](environment_adjective)
+    - what should i do when the [rainfall](environment) is [low](environment_adjective)
+    - what plant should i make when the [rainfall](environment) is [high](environment_adjective)
+    - what plant should i do when the [nutrients](environment) are [low](environment_adjective)
 - intent: ask_question_about_physiological_process
   examples: |
     - what [osmosis](physiological_process) do
@@ -138,6 +141,7 @@ nlu:
     - what [routes]{"entity": "plant_part", "value": "roots"} are best when [rainfall](environment) is [low](environment_adjective)
     - what [leaves](plant_part) should i [pick](adjective) when the [rainfall](environment) is [high](environment_adjective)
     - what [leaf]{"entity": "plant_part", "value": "leaves"} is suited for a [high](environment_adjective) [wind](environment) environment
+    - what kind of [routes]{"entity": "plant_part", "value": "roots"} should i choose when the [rainfall](environment) is [low](environment_adjective)
 - intent: ask_question_about_location
   examples: |
     - where are we
@@ -181,28 +185,30 @@ nlu:
   examples: |
     - who did 9/11
     - what is 2+2
-    - which tress has the largest [leaves](plant_part)
+    - which tree has the largest [leaves](plant_part)
     - what plant has the [thickest](adjective) [stem](plant_part)
     - do bamboos have [deep](adjective) [roots](plant_part)
     - which country has the most kinds of plants
     - tell me about the flora in yosimete
     - when do cherries blossom in japan
     - how do monkeys climb trees
-- synonym: non-branching
-  examples: |
-    - non branching
-- synonym: roots
-  examples: |
-    - routes
-    - route
-    - root
-- synonym: thick-skinned
-  examples: |
-    - thick skinned
+    - here is something for you
+    - here is some garbage
 - synonym: leaves
   examples: |
     - leaf
     - leave
+- synonym: roots
+  examples: |
+    - root
+    - routes
+    - route
+- synonym: non-branching
+  examples: |
+    - non branching
+- synonym: thick-skinned
+  examples: |
+    - thick skinned
 - synonym: thin-skinned
   examples: |
     - thin skinned

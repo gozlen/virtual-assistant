@@ -3,14 +3,14 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- ask_question_about_part_advantage
-- ask_question_about_plant_part
-- ask_question_about_plant_in_environment
 - ask_question_about_environment
-- ask_question_about_physiological_process
-- out_of_scope
-- ask_about_experiment
+- ask_question_about_part_advantage
 - ask_question_about_identity
+- ask_question_about_plant_in_environment
+- out_of_scope
+- ask_question_about_plant_part
+- ask_question_about_physiological_process
+- ask_about_experiment
 - ask_question_about_location
 - ask_how_are_you
 - greet
@@ -23,17 +23,15 @@ entities:
 - plant_part
 responses:
   utter_greet:
-  - text: Hey! There I'm your peronal assistant
+  - text: '500'
   utter_goodbye:
-  - text: Bye
+  - text: '501'
   utter_answer_about_experiment:
-  - text: this is an experiment
+  - text: '502'
   utter_answer_how_are_you:
-  - text: I'm great!
+  - text: '503'
   utter_answer_about_identity:
-  - text: I am a bot
-  utter_answer_about_location:
-  - text: We are here
+  - text: '504'
   utter_out_of_scope:
   - text: '999'
 actions:

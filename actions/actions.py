@@ -32,7 +32,7 @@ class ActionAnswerQuestionAboutPhysiologicalProcess(Action):
         process = next(tracker.get_latest_entity_values("physiological_process"), None)
 
         if process == None:
-            dispatcher.utter_message(text = "999")
+            dispatcher.utter_message(text = '999')
             return []
         process = process.lower()
         if 'osmosis' in process:
@@ -68,7 +68,7 @@ class ActionAnswerQuestionAboutEnvironment(Action):
         adjective = next(tracker.get_latest_entity_values("environment_adjective"), None)
 
         if environment == None or adjective == None:
-            dispatcher.utter_message(text = "999")
+            dispatcher.utter_message(text = '999')
             return []
 
 
@@ -129,7 +129,7 @@ class ActionAnswerQuestionAboutPartAdvantage(Action):
         adjective = next(tracker.get_latest_entity_values("adjective"), None)
 
         if plant_part == None or adjective == None:
-            dispatcher.utter_message(text = "999")
+            dispatcher.utter_message(text = '999')
             return []
 
         plant_part = plant_part.lower()
@@ -205,7 +205,7 @@ class ActionAnswerQuestionAboutPlantPart(Action):
         plant_part = next(tracker.get_latest_entity_values("plant_part"), None)
 
         if plant_part == None:
-            dispatcher.utter_message(text = "999")
+            dispatcher.utter_message(text = '999')
             return []
 
         plant_part = plant_part.lower()
@@ -236,7 +236,7 @@ class ActionAnswerQuestionAboutPlantInEnvironment(Action):
 
 
         if plant_part == None or adjective == None or environment == None:
-            dispatcher.utter_message(text = "999")
+            dispatcher.utter_message(text = '999')
             return []
 
         adjective = adjective.lower()
@@ -244,7 +244,7 @@ class ActionAnswerQuestionAboutPlantInEnvironment(Action):
         environment = environment.lower()
         
         if adjective != 'low' and adjective != 'high':
-            dispatcher.utter_message(text = "999")
+            dispatcher.utter_message(text = '999')
             return []
 
         if 'root' in plant_part or 'rout' in plant_part:
