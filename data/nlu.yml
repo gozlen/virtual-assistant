@@ -45,11 +45,11 @@ nlu:
   examples: |
     - When is a [thick](adjective) [stem](plant_part) good?
     - What are the advantages of [deep](adjective) [roots](plant_part)?
-    - When are [big](adjective) [leaves](plant_part) beneficial for the plant?
+    - When are [big]{"entity": "adjective", "value": "large"} [leaves](plant_part) beneficial for the plant?
     - When should a [stem](plant_part) have a [bark](adjective)?
     - When should I choose [non-branching](adjective) [roots](adjective)?
     - Can you tell me more about [thick](adjective) [stem](plant_part)
-    - when [big](adjective) [leaves](plant_part) good
+    - when [large](adjective) [leaves](plant_part) good
     - Tell me about [thin](adjective) [leaves](plant_part)
     - I don't understand [thin](adjective) [leaves](plant_part)
     - when [small](adjective) [leaves](plant_part) good
@@ -58,13 +58,13 @@ nlu:
     - Please repeat [thick](adjective) [stem](plant_part)
     - what are [thin](adjective) [roots](plant_part)
     - where do [thick](adjective) [leaves](plant_part) thrive
-    - where do [big](adjective) [leaves](plant_part) grow
+    - where do [large](adjective) [leaves](plant_part) grow
     - where [deep](adjective) [roots](plant_part) grow
     - yo when are [shallow](adjective) [roots](plant_part) good
     - when [short](adjective) [stem](plant_part) is good
     - are [thin-skinned](adjective) [leaves](plant_part) good
     - where [thick-skinned](adjective) [leaves](plant_part) gro
-    - where [big](adjective) [leaves](plant_part)
+    - where [big]{"entity": "adjective", "value": "large"} [leaves](plant_part)
     - temme about [branching](adjective) [roots](plant_part)
     - i dont get [non-branching](adjective) [roots](plant_part)
     - tell me about [non branching]{"entity": "adjective", "value": "non-branching"} [routes]{"entity": "plant_part", "value": "roots"}
@@ -224,6 +224,9 @@ nlu:
 - synonym: non-branching
   examples: |
     - non branching
+- synonym: large
+  examples: |
+    - big
 - synonym: thick-skinned
   examples: |
     - thick skinned
