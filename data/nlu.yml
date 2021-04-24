@@ -108,6 +108,10 @@ nlu:
     - what should i do when the [rainfall](environment) is [low](environment_adjective)
     - what plant should i make when the [rainfall](environment) is [high](environment_adjective)
     - what plant should i do when the [nutrients](environment) are [low](environment_adjective)
+    - tell me about [high](environment_adjective) [rainfall](environment) environments
+    - tell me about [high](environment_adjective) [rainfall](environment) environment
+    - whats best for [lower]{"entity": "environment_adjective", "value": "low"} [water table](environment)
+    - tell me about [lower]{"entity": "environment_adjective", "value": "low"} [nutrients](environment)
 - intent: ask_question_about_physiological_process
   examples: |
     - what [osmosis](physiological_process) do
@@ -147,6 +151,8 @@ nlu:
     - what [leaves](plant_part) should i [pick](adjective) when the [rainfall](environment) is [high](environment_adjective)
     - what [leaf]{"entity": "plant_part", "value": "leaves"} is suited for a [high](environment_adjective) [wind](environment) environment
     - what kind of [routes]{"entity": "plant_part", "value": "roots"} should i choose when the [rainfall](environment) is [low](environment_adjective)
+    - what [routes]{"entity": "plant_part", "value": "roots"} are best in [lower]{"entity": "environment_adjective", "value": "low"} [sunlight](environment) places
+    - what [stem](plant_part) should i [pick](adjective) for [lower]{"entity": "environment_adjective", "value": "low"} [sunlight](environment)
 - intent: ask_question_about_location
   examples: |
     - where are we
@@ -214,12 +220,18 @@ nlu:
 - synonym: thick-skinned
   examples: |
     - thick skinned
-- synonym: thin-skinned
-  examples: |
-    - thin skinned
 - synonym: stem
   examples: |
     - stems
+    - stam
+    - stan
+    - stams
+- synonym: low
+  examples: |
+    - lower
+- synonym: thin-skinned
+  examples: |
+    - thin skinned
 - synonym: big
   examples: |
     - large
