@@ -139,11 +139,11 @@ class ActionAnswerQuestionAboutPartAdvantage(Action):
                 message = '110'
             elif adjective == 'non-branching' or adjective == 'non branching':
                 message = '111'
-            if adjective == 'deep':
+            elif adjective == 'deep':
                 message = '112'
             elif adjective == 'shallow':
                 message = '113'
-            if adjective == 'thick':
+            elif adjective == 'thick':
                 message = '114'
             elif adjective == 'thin':
                 message = '115'
@@ -156,11 +156,11 @@ class ActionAnswerQuestionAboutPartAdvantage(Action):
                 message = '120'
             elif adjective == 'short':
                 message = '121'
-            if adjective == 'thick':
+            elif adjective == 'thick':
                 message = '122'
             elif adjective == 'thin':
                 message = '123'
-            if adjective == 'bark':
+            elif adjective == 'bark':
                 message = '124'
             elif 'no' in adjective and 'bark' in adjective:
                 message = '125'
@@ -172,11 +172,11 @@ class ActionAnswerQuestionAboutPartAdvantage(Action):
                 message = '130'
             elif adjective == 'thin':
                 message = '131'
-            if adjective == 'small':
+            elif adjective == 'small':
                 message = '132'
             elif adjective == 'large':
                 message = '133'
-            if 'thick' in  adjective  and 'skinned' in  adjective :
+            elif 'thick' in  adjective  and 'skinned' in  adjective :
                 message = '134'
             elif 'thin' in adjective and 'skinned' in adjective:
                 message = '135'

@@ -3,15 +3,14 @@ digraph  {
 "-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
 1 [class=active, fontsize=12, label=action_session_start];
 2 [class=active, fontsize=12, label=action_answer_question_about_part_advantage];
-3 [class=active, fontsize=12, label=action_answer_question_about_environment];
-4 [class="intent dashed active", label="  ?  ", shape=rect];
-5 [class="intent active", fillcolor=lightblue, label="should i pick thick skinned leaves here", shape=rect, style=filled];
-6 [class="intent active", fillcolor=lightblue, label="what plant should i do when the nutrients are low", shape=rect, style=filled];
+7 [class="intent dashed active", label="  ?  ", shape=rect];
+8 [class="intent active", fillcolor=lightblue, label="tell me about short stems", shape=rect, style=filled];
+9 [class="intent active", fillcolor=lightblue, label="whats good about thin stems", shape=rect, style=filled];
 0 -> "-1"  [class="", key=NONE, label=""];
 0 -> 1  [class=active, key=NONE, label=""];
-1 -> 5  [class=active, key=0];
-2 -> 6  [class=active, key=0];
-3 -> 4  [class=active, key=NONE, label=""];
-5 -> 2  [class=active, key=0];
-6 -> 3  [class=active, key=0];
+1 -> 8  [class=active, key=0];
+2 -> 7  [class=active, key=NONE, label=""];
+2 -> 9  [class=active, key=0];
+8 -> 2  [class=active, key=0];
+9 -> 2  [class=active, key=0];
 }

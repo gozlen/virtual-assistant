@@ -3,8 +3,8 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- ask_question_about_environment
 - ask_question_about_part_advantage
+- ask_question_about_environment
 - ask_question_about_identity
 - ask_question_about_plant_in_environment
 - out_of_scope

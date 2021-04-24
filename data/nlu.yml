@@ -79,6 +79,11 @@ nlu:
     - where should i [pick](adjective) [non branching]{"entity": "adjective", "value": "non-branching"} [roots](plant_part)
     - where do plants with [thick skinned]{"entity": "adjective", "value": "thick-skinned"} [leaves](plant_part) tend to grow
     - should i [pick](adjective) [thick skinned]{"entity": "adjective", "value": "thick-skinned"} [leaves](plant_part) here
+    - tell me about [short](adjective) [stems]{"entity": "plant_part", "value": "stem"}
+    - what kind of environment are [thick](adjective) [stems]{"entity": "plant_part", "value": "stem"} good in
+    - what are the benefits of a [long](adjective) [stem](plant_part)
+    - what are the benefits of a [thick](adjective) [stem](plant_part)
+    - whats good about [thin](adjective) [stems]{"entity": "plant_part", "value": "stem"}
 - intent: ask_question_about_environment
   examples: |
     - What should I keep in mind when the [wind](environment) is [high](environment_adjective)?
