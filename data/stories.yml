@@ -283,3 +283,19 @@ stories:
     - environment_adjective: high
     - environment: wind
   - action: action_answer_question_about_environment
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_question_about_part_advantage
+    entities:
+    - adjective: small
+    - plant_part: leaves
+  - action: action_answer_question_about_part_advantage
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_question_about_part_advantage
+    entities:
+    - adjective: small
+    - plant_part: leaves
+  - action: action_answer_question_about_part_advantage

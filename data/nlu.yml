@@ -48,18 +48,23 @@ nlu:
     - When are [big](adjective) [leaves](plant_part) beneficial for the plant?
     - When should a [stem](plant_part) have a [bark](adjective)?
     - When should I choose [non-branching](adjective) [roots](adjective)?
-    - when [big](adjective) [leaves](plant_part) good
     - Can you tell me more about [thick](adjective) [stem](plant_part)
+    - when [big](adjective) [leaves](plant_part) good
     - Tell me about [thin](adjective) [leaves](plant_part)
     - I don't understand [thin](adjective) [leaves](plant_part)
+    - when [small](adjective) [leaves](plant_part) good
+    - Tell me about [small](adjective) [leaves](plant_part)
+    - I don't understand [small](adjective) [leaves](plant_part)
     - Please repeat [thick](adjective) [stem](plant_part)
     - what are [thin](adjective) [roots](plant_part)
     - where do [thick](adjective) [leaves](plant_part) thrive
+    - where do [big](adjective) [leaves](plant_part) grow
     - where [deep](adjective) [roots](plant_part) grow
     - yo when are [shallow](adjective) [roots](plant_part) good
     - when [short](adjective) [stem](plant_part) is good
     - are [thin-skinned](adjective) [leaves](plant_part) good
     - where [thick-skinned](adjective) [leaves](plant_part) gro
+    - where [big](adjective) [leaves](plant_part)
     - temme about [branching](adjective) [roots](plant_part)
     - i dont get [non-branching](adjective) [roots](plant_part)
     - tell me about [non branching]{"entity": "adjective", "value": "non-branching"} [routes]{"entity": "plant_part", "value": "roots"}
@@ -76,14 +81,20 @@ nlu:
     - i dont understand [non branching]{"entity": "adjective", "value": "non-branching"} [roots](plant_part)
     - wherea re [thick-skinned](adjective) [leaves](plant_part) best
     - tell me about [thick skinned]{"entity": "adjective", "value": "thick-skinned"} [leaves](plant_part)
-    - where should i [pick](adjective) [non branching]{"entity": "adjective", "value": "non-branching"} [roots](plant_part)
+    - where should i pick [non branching]{"entity": "adjective", "value": "non-branching"} [roots](plant_part)
     - where do plants with [thick skinned]{"entity": "adjective", "value": "thick-skinned"} [leaves](plant_part) tend to grow
-    - should i [pick](adjective) [thick skinned]{"entity": "adjective", "value": "thick-skinned"} [leaves](plant_part) here
+    - should i pick [thick skinned]{"entity": "adjective", "value": "thick-skinned"} [leaves](plant_part) here
+    - where do plants with [small](adjective) [leaves](plant_part) tend to grow
+    - should i pick [small](adjective) [leaves](plant_part) here
     - tell me about [short](adjective) [stems]{"entity": "plant_part", "value": "stem"}
     - what kind of environment are [thick](adjective) [stems]{"entity": "plant_part", "value": "stem"} good in
     - what are the benefits of a [long](adjective) [stem](plant_part)
     - what are the benefits of a [thick](adjective) [stem](plant_part)
+    - what are the benefits of [deep](adjective) [roots](plant_part)
+    - what are the pros of [shallow](adjective) [roots](plant_part)
     - whats good about [thin](adjective) [stems]{"entity": "plant_part", "value": "stem"}
+    - whats goodf about [small](adjective) [leaves](plant_part)
+    - i dont understand why i would pick [small](adjective) [leaves](plant_part)
 - intent: ask_question_about_environment
   examples: |
     - What should I keep in mind when the [wind](environment) is [high](environment_adjective)?
@@ -97,6 +108,7 @@ nlu:
     - what grows when [water table](environment) [low](environment_adjective)
     - whats good in [high](environment_adjective) [rainfall](environment)
     - what grows in [low](environment_adjective) [sunlight](environment)
+    - what grows in [high](environment_adjective) [sun]{"entity": "environment", "value": "sunlight"}
     - whats good when [nutrients](environment) [low](environment_adjective)
     - how does a [high](environment_adjective) [water table](environment) affect a plant
     - whats good in [high](environment_adjective) [wind](environment) environments
@@ -109,11 +121,12 @@ nlu:
     - what plant should i make when the [rain]{"entity": "environment", "value": "rainfall"} is [high](environment_adjective)
     - what plant should i do when the [nutrients](environment) are [low](environment_adjective)
     - tell me about [high](environment_adjective) [rainfall](environment) environments
+    - tell me about [high](environment_adjective) [sun]{"entity": "environment", "value": "sunlight"} environments
     - tell me about [high](environment_adjective) [rain]{"entity": "environment", "value": "rainfall"} environment
     - whats best for [lower]{"entity": "environment_adjective", "value": "low"} [water table](environment)
     - tell me about [lower]{"entity": "environment_adjective", "value": "low"} [nutrients](environment)
     - tell me about [low](environment_adjective) [rain]{"entity": "environment", "value": "rainfall"} environment
-    - tell me about [low](environment_adjective) {"entity": "environment", "value": "sunlight"} environment
+    - tell me about [low](environment_adjective) [sun]{"entity": "environment", "value": "sunlight"} environment
     - tell me about [high](environment_adjective) [wind](environment) environment
 - intent: ask_question_about_physiological_process
   examples: |
@@ -133,12 +146,14 @@ nlu:
   examples: |
     - what [stem](plant_part) is good when the [rainfall](environment) is [high](environment_adjective)
     - what [roots](plant_part) are good when the [wind](environment) is [high](environment_adjective)
+    - what [stem](plant_part) is good when the [water table](environment) is [high](environment_adjective)
+    - what [roots](plant_part) are good when the [water table](environment) is [low](environment_adjective)
     - which [stem] should i choose when the [water table](environment) is [low](environment_adjective)
     - which [leaves](plant_part) are good in [low](environment_adjective) [nutrition](environment) environments?
     - what kind of [stem](plant_part) is best under [high](environment_adjective) [rainfall](environment)
     - what type of [roots](plant_part) grow in [low](environment_adjective) [temperature](environment)
-    - what [leaves](plant_part) [high](environment_adjective) [sunlight]{"entity": "environment", "value": "sunlight"}?
-    - what [leaves](plant_part) [high](environment_adjective) [sunlight](environment)
+    - what [leaves](plant_part) [high](environment_adjective) [sun]{"entity": "environment", "value": "sunlight"}?
+    - what [stem](plant_part) [high](environment_adjective) [sunlight](environment)
     - what [leaves](plant_part) [low](environment_adjective) [wind](environment)
     - hey there could you tell me what type of [leaves](plant_part) is the best in [low](environment_adjective) [wind](environment) environments
     - whats the best kind of [leaves](plant_part) in [high](environment_adjective) [rainfall](environment) environments
@@ -147,15 +162,16 @@ nlu:
     - what [roots](plant_part) work in [low](environment_adjective) [water table](environment)
     - what type of [roots](plant_part) are [suitable](environment) when the [nutrients](environment) are [low](environment_adjective)
     - what kind of [roots](plant_part) when [temperature](environment) is [low](environment_adjective)
+    - what kind of [stem](plant_part) when [sun]{"entity": "environment", "value": "sunlight"} is [high](environment_adjective)
     - what [roots](plant_part) should i choose when the [nutrients](environment) are [low](environment_adjective)
     - what [route]{"entity": "plant_part", "value": "roots"} when [sunlight](environment) is [high](environment_adjective)
     - what [root]{"entity": "plant_part", "value": "roots"} should i choose when the environment has a [high](environment_adjective) [wind](environment)
     - what [routes]{"entity": "plant_part", "value": "roots"} are best when [rainfall](environment) is [low](environment_adjective)
-    - what [leaves](plant_part) should i [pick](adjective) when the [rainfall](environment) is [high](environment_adjective)
+    - what [leaves](plant_part) should i pick when the [rainfall](environment) is [high](environment_adjective)
     - what [leaf]{"entity": "plant_part", "value": "leaves"} is suited for a [high](environment_adjective) [wind](environment) environment
     - what kind of [routes]{"entity": "plant_part", "value": "roots"} should i choose when the [rainfall](environment) is [low](environment_adjective)
     - what [routes]{"entity": "plant_part", "value": "roots"} are best in [lower]{"entity": "environment_adjective", "value": "low"} [sunlight](environment) places
-    - what [stem](plant_part) should i [pick](adjective) for [lower]{"entity": "environment_adjective", "value": "low"} [sunlight](environment)
+    - what [stem](plant_part) should i pick for [lower]{"entity": "environment_adjective", "value": "low"} [sunlight](environment)
 - intent: ask_question_about_identity
   examples: |
     - are you a real person
@@ -217,6 +233,12 @@ nlu:
     - stam
     - stan
     - stams
+- synonym: sunlight
+  examples: |
+    - sun
+- synonym: rainfall
+  examples: |
+    - rain
 - synonym: low
   examples: |
     - lower
