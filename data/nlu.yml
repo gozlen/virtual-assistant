@@ -102,16 +102,19 @@ nlu:
     - whats good in [high](environment_adjective) [wind](environment) environments
     - whats best when the [nutrients](environment) are [low](environment_adjective)
     - whats good when [sunlight](environment) is [high](environment_adjective)
-    - what is important in [low](environment_adjective) [rainfall](environment)
+    - what is important in [low](environment_adjective) [rain]{"entity": "environment", "value": "rainfall"}
     - how does [low](environment_adjective) [rainfall](environment) affect plants
     - what [route]{"entity": "plant_part", "value": "roots"} when [sunlight](environment) is [high](environment_adjective)
     - what should i do when the [rainfall](environment) is [low](environment_adjective)
-    - what plant should i make when the [rainfall](environment) is [high](environment_adjective)
+    - what plant should i make when the [rain](environment) is [high]{"entity": "environment", "value": "rainfall"}
     - what plant should i do when the [nutrients](environment) are [low](environment_adjective)
     - tell me about [high](environment_adjective) [rainfall](environment) environments
-    - tell me about [high](environment_adjective) [rainfall](environment) environment
+    - tell me about [high](environment_adjective) [rain]{"entity": "environment", "value": "rainfall"} environment
     - whats best for [lower]{"entity": "environment_adjective", "value": "low"} [water table](environment)
     - tell me about [lower]{"entity": "environment_adjective", "value": "low"} [nutrients](environment)
+    - tell me about [low](environment_adjective) [rain]{"entity": "environment", "value": "rainfall"} environment
+    - tell me about [low](environment_adjective) {"entity": "environment", "value": "sunlight"} environment
+    - tell me about [high](environment_adjective) [wind](environment) environment
 - intent: ask_question_about_physiological_process
   examples: |
     - what [osmosis](physiological_process) do
@@ -134,7 +137,7 @@ nlu:
     - which [leaves](plant_part) are good in [low](environment_adjective) [nutrition](environment) environments?
     - what kind of [stem](plant_part) is best under [high](environment_adjective) [rainfall](environment)
     - what type of [roots](plant_part) grow in [low](environment_adjective) [temperature](environment)
-    - what [leaves](plant_part) [high](environment_adjective) [sunlight](environment)?
+    - what [leaves](plant_part) [high](environment_adjective) [sunlight]{"entity": "environment", "value": "sunlight"}?
     - what [leaves](plant_part) [high](environment_adjective) [sunlight](environment)
     - what [leaves](plant_part) [low](environment_adjective) [wind](environment)
     - hey there could you tell me what type of [leaves](plant_part) is the best in [low](environment_adjective) [wind](environment) environments
@@ -153,18 +156,6 @@ nlu:
     - what kind of [routes]{"entity": "plant_part", "value": "roots"} should i choose when the [rainfall](environment) is [low](environment_adjective)
     - what [routes]{"entity": "plant_part", "value": "roots"} are best in [lower]{"entity": "environment_adjective", "value": "low"} [sunlight](environment) places
     - what [stem](plant_part) should i [pick](adjective) for [lower]{"entity": "environment_adjective", "value": "low"} [sunlight](environment)
-- intent: ask_question_about_location
-  examples: |
-    - where are we
-    - what are we doing here?
-    - what planet are we on
-    - what environment is that
-    - what environment are we in
-    - what's this planet
-    - remind me where we are
-    - repeat what the environment is
-    - where are we now
-    - can you tell me about the current environment again
 - intent: ask_question_about_identity
   examples: |
     - are you a real person
