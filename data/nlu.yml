@@ -95,6 +95,8 @@ nlu:
     - whats good about [thin](adjective) [stems]{"entity": "plant_part", "value": "stem"}
     - whats goodf about [small](adjective) [leaves](plant_part)
     - i dont understand why i would pick [small](adjective) [leaves](plant_part)
+    - whats goodf about [large](adjective) [leaves](plant_part)
+    - i dont understand why i would pick [large](adjective) [leaves](plant_part)
 - intent: ask_question_about_environment
   examples: |
     - What should I keep in mind when the [wind](environment) is [high](environment_adjective)?
