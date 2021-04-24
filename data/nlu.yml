@@ -106,7 +106,7 @@ nlu:
     - how does [low](environment_adjective) [rainfall](environment) affect plants
     - what [route]{"entity": "plant_part", "value": "roots"} when [sunlight](environment) is [high](environment_adjective)
     - what should i do when the [rainfall](environment) is [low](environment_adjective)
-    - what plant should i make when the [rain](environment) is [high]{"entity": "environment", "value": "rainfall"}
+    - what plant should i make when the [rain]{"entity": "environment", "value": "rainfall"} is [high](environment_adjective)
     - what plant should i do when the [nutrients](environment) are [low](environment_adjective)
     - tell me about [high](environment_adjective) [rainfall](environment) environments
     - tell me about [high](environment_adjective) [rain]{"entity": "environment", "value": "rainfall"} environment
