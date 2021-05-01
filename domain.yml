@@ -6,9 +6,9 @@ intents:
 - ask_question_about_plant_in_environment
 - ask_question_about_part_advantage
 - ask_question_about_environment
+- ask_question_about_plant_part
 - ask_question_about_identity
 - out_of_scope
-- ask_question_about_plant_part
 - ask_question_about_physiological_process
 - ask_about_experiment
 - ask_question_about_location

@@ -331,3 +331,80 @@ stories:
     - environment_adjective: high
     - environment: rainfall
   - action: action_answer_question_about_plant_in_environment
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_question_about_plant_part
+    entities:
+    - plant_part: roots
+  - action: action_answer_question_about_plant_part
+  - intent: ask_question_about_part_advantage
+    entities:
+    - adjective: deep
+    - plant_part: roots
+  - action: action_answer_question_about_part_advantage
+  - intent: ask_question_about_part_advantage
+    entities:
+    - adjective: deep
+    - plant_part: roots
+  - action: action_answer_question_about_part_advantage
+  - intent: ask_question_about_environment
+    entities:
+    - environment_adjective: high
+    - environment: wind
+  - action: action_answer_question_about_environment
+  - intent: ask_question_about_environment
+    entities:
+    - environment_adjective: high
+    - environment: water table
+  - action: action_answer_question_about_environment
+  - intent: ask_question_about_environment
+    entities:
+    - environment_adjective: low
+    - environment: temperature
+  - action: action_answer_question_about_environment
+  - intent: ask_question_about_plant_part
+    entities:
+    - plant_part: roots
+  - action: action_answer_question_about_plant_part
+  - intent: ask_question_about_plant_in_environment
+    entities:
+    - environment_adjective: high
+    - environment: wind
+    - plant_part: stem
+  - action: action_answer_question_about_plant_in_environment
+  - intent: ask_question_about_plant_in_environment
+    entities:
+    - environment_adjective: low
+    - environment: rainfall
+    - plant_part: stem
+  - action: action_answer_question_about_plant_in_environment
+  - intent: ask_question_about_plant_in_environment
+    entities:
+    - environment_adjective: low
+    - environment: rainfall
+    - adjective: anything
+    - plant_part: stem
+  - action: action_answer_question_about_plant_in_environment
+  - intent: ask_question_about_plant_in_environment
+    entities:
+    - environment_adjective: low
+    - environment: temperature
+    - adjective: anything
+    - plant_part: stem
+  - action: action_answer_question_about_plant_in_environment
+  - intent: ask_question_about_plant_in_environment
+    entities:
+    - environment_adjective: high
+    - environment: wind
+    - plant_part: leaves
+  - action: action_answer_question_about_plant_in_environment
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_question_about_plant_in_environment
+    entities:
+    - environment_adjective: high
+    - environment: wind
+    - plant_part: roots
+  - action: action_answer_question_about_plant_in_environment

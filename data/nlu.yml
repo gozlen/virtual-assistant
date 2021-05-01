@@ -41,6 +41,7 @@ nlu:
     - what [leaves](plant_part) do
     - what is a [leaf]{"entity": "plant_part", "value": "leaves"}
     - what is a [root]{"entity": "plant_part", "value": "roots"}
+    - Tell me about plant [roots](plant_part)?
 - intent: ask_question_about_part_advantage
   examples: |
     - When is a [thick](adjective) [stem](plant_part) good?
@@ -99,6 +100,8 @@ nlu:
     - i dont understand why i would pick [large](adjective) [leaves](plant_part)
     - what are the advantages of [large]{"entity": "adjective", "value": "big"} [leaves](plant_part)
     - whats good about [thick](adjective) [leaves](plant_part)
+    - Why would I choose [deep](adjective) [roots](plant_part)?
+    - Is it better to choose [deep](adjective) [roots](plant_part)?
 - intent: ask_question_about_environment
   examples: |
     - What should I keep in mind when the [wind](environment) is [high](environment_adjective)?
@@ -132,6 +135,9 @@ nlu:
     - tell me about [low](environment_adjective) [rain]{"entity": "environment", "value": "rainfall"} environment
     - tell me about [low](environment_adjective) [sun]{"entity": "environment", "value": "sunlight"} environment
     - tell me about [high](environment_adjective) [wind](environment) environment
+    - What are the effects of [high](environment_adjective) [wind](environment) on plants?
+    - What are the effects of [high](environment_adjective) [water tables]{"entity": "environment", "value": "water table"} on plants?
+    - What is the impact of [low](environment_adjective) [temperatures]{"entity": "environment", "value": "temperature"} on plants?
 - intent: ask_question_about_physiological_process
   examples: |
     - what [osmosis](physiological_process) do
@@ -178,6 +184,12 @@ nlu:
     - what [stem](plant_part) should i pick for [lower]{"entity": "environment_adjective", "value": "low"} [sunlight](environment)
     - what [stems]{"entity": "plant_part", "value": "stem"} are best for [heavy]{"entity": "environment_adjective", "value": "high"} [rain]{"entity": "environment", "value": "rainfall"}
     - what [leaves](plant_part) should i get for [heavy]{"entity": "environment_adjective", "value": "high"} [rain]{"entity": "environment", "value": "rainfall"}
+    - what do [high](environment_adjective) [winds]{"entity": "environment", "value": "wind"} do to [stems]{"entity": "plant_part", "value": "stem"}
+    - what does [low](environment_adjective) [rainfall](environment) do to [stem](plant_part)
+    - does [low](environment_adjective) [rainfall](environment) do anything to [stem](plant_part)
+    - does [low](environment_adjective) [temperature](environment) do anything to [stem](plant_part)
+    - do [strong]{"entity": "environment_adjective", "value": "high"} [winds]{"entity": "environment", "value": "wind"} do anything to [leaves](plant_part)
+    - what do [strong]{"entity": "environment_adjective", "value": "high"} [winds]{"entity": "environment", "value": "wind"} do to [roots](plant_part)
 - intent: ask_question_about_identity
   examples: |
     - are you a real person
@@ -258,15 +270,28 @@ nlu:
     - lower
     - little
     - not a lot of
+- synonym: water table
+  examples: |
+    - water tables
+- synonym: temperature
+  examples: |
+    - temperatures
 - synonym: high
   examples: |
     - heavy
+    - strong
+- synonym: wind
+  examples: |
+    - winds
 - synonym: no bark
   examples: |
     - without bark
 - synonym: thin-skinned
   examples: |
     - thin skinned
+- synonym: nutrients
+  examples: |
+    - nutria
 - lookup: plant_part
   examples: |
     - leaves
