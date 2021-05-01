@@ -299,3 +299,35 @@ stories:
     - adjective: small
     - plant_part: leaves
   - action: action_answer_question_about_part_advantage
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_question_about_part_advantage
+    entities:
+    - adjective: big
+    - plant_part: leaves
+  - action: action_answer_question_about_part_advantage
+  - intent: ask_question_about_part_advantage
+    entities:
+    - adjective: big
+    - plant_part: leaves
+  - action: action_answer_question_about_part_advantage
+  - intent: ask_question_about_part_advantage
+    entities:
+    - adjective: thick
+    - plant_part: leaves
+  - action: action_answer_question_about_part_advantage
+  - intent: ask_question_about_plant_in_environment
+    entities:
+    - plant_part: stem
+    - environment: rainfall
+  - action: action_answer_question_about_plant_in_environment
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_question_about_plant_in_environment
+    entities:
+    - plant_part: leaves
+    - environment_adjective: high
+    - environment: rainfall
+  - action: action_answer_question_about_plant_in_environment

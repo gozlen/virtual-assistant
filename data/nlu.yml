@@ -68,7 +68,7 @@ nlu:
     - temme about [branching](adjective) [roots](plant_part)
     - i dont get [non-branching](adjective) [roots](plant_part)
     - tell me about [non branching]{"entity": "adjective", "value": "non-branching"} [routes]{"entity": "plant_part", "value": "roots"}
-    - in what environments are [long](adjective) [stems](plant_part) good
+    - in what environments are [long](adjective) [stems]{"entity": "plant_part", "value": "stem"} good
     - where are [non-branching](adjective) [roots](plant_part) good
     - where are [routes]{"entity": "plant_part", "value": "roots"} good
     - where do [deep](adjective) [routes]{"entity": "plant_part", "value": "roots"} work best
@@ -97,6 +97,8 @@ nlu:
     - i dont understand why i would pick [small](adjective) [leaves](plant_part)
     - whats goodf about [large](adjective) [leaves](plant_part)
     - i dont understand why i would pick [large](adjective) [leaves](plant_part)
+    - what are the advantages of [large]{"entity": "adjective", "value": "big"} [leaves](plant_part)
+    - whats good about [thick](adjective) [leaves](plant_part)
 - intent: ask_question_about_environment
   examples: |
     - What should I keep in mind when the [wind](environment) is [high](environment_adjective)?
@@ -174,6 +176,8 @@ nlu:
     - what kind of [routes]{"entity": "plant_part", "value": "roots"} should i choose when the [rainfall](environment) is [low](environment_adjective)
     - what [routes]{"entity": "plant_part", "value": "roots"} are best in [lower]{"entity": "environment_adjective", "value": "low"} [sunlight](environment) places
     - what [stem](plant_part) should i pick for [lower]{"entity": "environment_adjective", "value": "low"} [sunlight](environment)
+    - what [stems]{"entity": "plant_part", "value": "stem"} are best for [heavy]{"entity": "environment_adjective", "value": "high"} [rain]{"entity": "environment", "value": "rainfall"}
+    - what [leaves](plant_part) should i get for [heavy]{"entity": "environment_adjective", "value": "high"} [rain]{"entity": "environment", "value": "rainfall"}
 - intent: ask_question_about_identity
   examples: |
     - are you a real person
@@ -223,21 +227,26 @@ nlu:
     - root
     - routes
     - route
-- synonym: non-branching
-  examples: |
-    - non branching
+    - fruit
 - synonym: large
   examples: |
     - big
-- synonym: thick-skinned
+- synonym: non-branching
   examples: |
-    - thick skinned
+    - non branching
 - synonym: stem
   examples: |
     - stems
     - stam
     - stan
     - stams
+- synonym: thick-skinned
+  examples: |
+    - thick skinned
+- synonym: big
+  examples: |
+    - large
+    - huge
 - synonym: sunlight
   examples: |
     - sun
@@ -247,13 +256,17 @@ nlu:
 - synonym: low
   examples: |
     - lower
+    - little
+    - not a lot of
+- synonym: high
+  examples: |
+    - heavy
+- synonym: no bark
+  examples: |
+    - without bark
 - synonym: thin-skinned
   examples: |
     - thin skinned
-- synonym: big
-  examples: |
-    - large
-    - huge
 - lookup: plant_part
   examples: |
     - leaves

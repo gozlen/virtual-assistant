@@ -174,7 +174,7 @@ class ActionAnswerQuestionAboutPartAdvantage(Action):
                 message = '131'
             elif adjective == 'small':
                 message = '132'
-            elif adjective == 'large':
+            elif adjective == 'big':
                 message = '133'
             elif 'thick' in  adjective  and 'skinned' in  adjective :
                 message = '134'
